@@ -1,13 +1,13 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static from staticfiles %}
 {% load bootstrap_tags %}
 
-{%block head_js %}
-<script type="text/javascript" src="https://js.strip.com/v2/"></script>
+{% block head_js %}
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
     //<![CDATA[
-    Stripe.publishableKey = '{{ publishable }}';
-    //]>
+        Stripe.publishableKey = '{{ publishable }}';
+    //]]>
 </script>
 <script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
 {% endblock %}
@@ -21,9 +21,9 @@
 
                 <div class="caption">
                     <h3>{{ item.product.name }}</h3>
-                    <p class="product-description">{{ item.product.descriptio }}</p>
+                    <p class="product-description">{{ item.product.description }}</p>
                     <p>{{ item.quantity }}</p>
-                    <p>€ {{ item.product.price }}</p>
+                    <p>{{ item.product.price }}</p>
                 </div>
             </div>
         </div>
