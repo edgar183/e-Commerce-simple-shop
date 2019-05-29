@@ -1,4 +1,4 @@
-{ extends 'base.html' %}
+{% extends 'base.html' %}
 {% load static from staticfiles %}
 {% load bootstrap_tags %}
 
@@ -23,7 +23,7 @@
                     <h3>{{ item.product.name }}</h3>
                     <p class="product-description">{{ item.product.descriptio }}</p>
                     <p>{{ item.quantity }}</p>
-                    <p>item.product.price</p>
+                    <p>€ {{ item.product.price }}</p>
                 </div>
             </div>
         </div>
